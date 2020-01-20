@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.2
+                                           Version 0.2.0.1
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -19,7 +19,7 @@ Product key
 
 Volume license is the best choice because it doesn't have problem with activation. Use volume license if possible.
 You need apply product key from volume license before do activation if you have ordinary license.
-You can see list of these keys here: https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys
+You can see list of these keys here: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612867(v%3Dws.11)
 
 Trouble guide
 
@@ -42,3 +42,4 @@ Version history
 
 0.1 - Initial version
 0.2 - Small changes
+0.2.0.1 - Documentation was updated
