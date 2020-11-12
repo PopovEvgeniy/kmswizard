@@ -34,7 +34,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Kms wizard';
- Form1.Caption:='Kms wizard 0.3';
+ Form1.Caption:='Kms wizard 0.3.1';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -45,7 +45,7 @@ begin
  Form1.LabeledEdit1.LabelPosition:=lpLeft;
  Form1.LabeledEdit1.Text:='';
  Form1.Button1.Enabled:=True;
- Form1.Button1.ShowHint:=False;
+ Form1.Button1.ShowHint:=True;
  Form1.Button2.ShowHint:=Form1.Button1.ShowHint;
  Form1.Button3.ShowHint:=Form1.Button1.ShowHint;
 end;

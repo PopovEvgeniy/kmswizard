@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.3
+                                           Version 0.3.1
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -43,4 +43,4 @@ Version history
 0.1 - Initial version
 0.2 - Small changes
 0.2.0.1 - Documentation was updated
-0.3 - Small changes
+0.3 - 0.3.1 - Small changes
