@@ -15,10 +15,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     LabeledEdit1: TLabeledEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure LabeledEdit1Change(Sender: TObject);
   private
@@ -34,7 +36,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Kms wizard';
- Form1.Caption:='Kms wizard 0.3.1';
+ Form1.Caption:='Kms wizard 0.3.2';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -48,6 +50,7 @@ begin
  Form1.Button1.ShowHint:=True;
  Form1.Button2.ShowHint:=Form1.Button1.ShowHint;
  Form1.Button3.ShowHint:=Form1.Button1.ShowHint;
+ Form1.Button4.ShowHint:=Form1.Button1.ShowHint;
 end;
 
 procedure language_setup();
@@ -56,9 +59,11 @@ begin
  Form1.Button1.Caption:='Activate';
  Form1.Button2.Caption:='Show activation status';
  Form1.Button3.Caption:='Change product key';
+ Form1.Button4.Caption:='Reset activation';
  Form1.Button1.Hint:='Activate you copy of Microsoft Windows via target server';
  Form1.Button2.Hint:='Show current activation status';
  Form1.Button3.Hint:='Change current product key';
+ Form1.Button4.Hint:='Reset current activation';
 end;
 
 procedure setup();
@@ -80,6 +85,13 @@ procedure do_activation(server:string);
 begin
  execute_command('slmgr /skms '+server);
  execute_command('slmgr /ato');
+end;
+
+procedure reset_activation();
+begin
+ execute_command('slmgr /upk');
+ execute_command('slmgr /ckms');
+ execute_command('slmgr /rearm');
 end;
 
 procedure change_product_key(title:string);
@@ -121,6 +133,11 @@ end;
 procedure TForm1.Button3Click(Sender: TObject);
 begin
  change_product_key(Application.Title);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+ reset_activation();
 end;
 
 end.

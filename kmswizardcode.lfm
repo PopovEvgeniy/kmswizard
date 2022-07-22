@@ -1,13 +1,13 @@
 object Form1: TForm1
   Left = 248
-  Height = 156
+  Height = 186
   Top = 210
   Width = 462
   Caption = 'Easy kms'
-  ClientHeight = 156
+  ClientHeight = 186
   ClientWidth = 462
   OnCreate = FormCreate
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.2.0'
   object Button1: TButton
     Left = 192
     Height = 25
@@ -48,5 +48,14 @@ object Form1: TForm1
     TabOrder = 3
     Text = 'LabeledEdit1'
     OnChange = LabeledEdit1Change
+  end
+  object Button4: TButton
+    Left = 160
+    Height = 25
+    Top = 152
+    Width = 136
+    Caption = 'Reset activation'
+    OnClick = Button4Click
+    TabOrder = 4
   end
 end

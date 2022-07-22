@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.3.1
+                                           Version 0.3.2
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -36,11 +36,12 @@ You can send me a letter to tuzik87@inbox.ru
 About program modification
 
 Source code is included in source.zip archive.
-It can be compiled under Lazarus 2.0.10 or higher.
+It can be compiled under Lazarus 2.2.2 or higher.
 
 Version history
 
 0.1 - Initial version
 0.2 - Small changes
-0.2.0.1 - Documentation was updated
+0.2.0.1 - Documentation updated
 0.3 - 0.3.1 - Small changes
+0.3.2 - User interface improved
