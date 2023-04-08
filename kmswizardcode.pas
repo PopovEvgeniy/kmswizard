@@ -36,7 +36,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Kms wizard';
- Form1.Caption:='Kms wizard 0.3.2';
+ Form1.Caption:='Kms wizard 0.3.3';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
@@ -73,7 +73,7 @@ begin
  language_setup();
 end;
 
-procedure execute_command(command:string);
+procedure execute_command(const command:string);
 var shell,arguments:string;
 begin
  shell:=GetEnvironmentVariable('COMSPEC');
@@ -81,7 +81,7 @@ begin
  if shell<>'' then ExecuteProcess(shell,arguments,[]);
 end;
 
-procedure do_activation(server:string);
+procedure do_activation(const server:string);
 begin
  execute_command('slmgr /skms '+server);
  execute_command('slmgr /ato');
@@ -94,7 +94,7 @@ begin
  execute_command('slmgr /rearm');
 end;
 
-procedure change_product_key(title:string);
+procedure change_product_key(const title:string);
 var key:string;
 begin
  key:=InputBox(title,'Enter new product key','');
