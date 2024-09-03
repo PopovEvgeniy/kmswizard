@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.3.3.2
+                                           Version 0.3.3.3
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -11,14 +11,14 @@ Internet connection
 
 Program description
 
-This software lets you activate Microsoft Windows via custom KMS server.
+This software lets you activate Microsoft Windows via a custom KMS server.
 Please use it for non-commercial home purposes only.
 This software needs admin rights for correct work. Run it as an admin.
 
 Product key
 
-The volume license is the best choice because it doesn't have problem with activation. Use the volume license if possible.
-You need to apply the product key the from volume license before do activation if you have an ordinary license.
+The volume license is the best choice because it doesn't have problems with activation. Use the volume license if possible.
+You need to apply the product key from the volume license before activation if you have an ordinary license.
 You can see these keys here: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612867(v%3Dws.11)
 
 Trouble guide
@@ -27,11 +27,11 @@ Try to change the server or product key if you have trouble with activation.
 
 License
 
-This program distributed under GNU GENERAL PUBLIC LICENSE.
+This program is distributed under GNU GENERAL PUBLIC LICENSE.
 
 Contact
 
-You can send me a letter at tuzik87@inbox.ru
+You can send me a letter at tuzik87@inbox.ru.
 
 About program modification
 
@@ -47,4 +47,4 @@ Version history
 0.3.2 — User interface improved.
 0.3.2.1 — Documentation updated.
 0.3.3 — Small changes.
-0.3.3.1 — 0.3.3.2 — Documentation updated.
+0.3.3.1 — 0.3.3.3 — Documentation updated.
