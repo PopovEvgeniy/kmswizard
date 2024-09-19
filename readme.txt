@@ -48,4 +48,4 @@ Version history
 0.3.2.1 — Documentation updated.
 0.3.3 — Small changes.
 0.3.3.1 — 0.3.3.3 — Documentation updated.
-0.3.3 — Small changes.
+0.3.4 — Small changes.
