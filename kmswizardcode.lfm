@@ -7,33 +7,33 @@ object Form1: TForm1
   ClientHeight = 186
   ClientWidth = 462
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '3.4.0.0'
   object Button1: TButton
     Left = 192
     Height = 25
     Top = 56
     Width = 75
     Caption = 'Activate'
-    OnClick = Button1Click
     TabOrder = 0
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 128
     Height = 25
     Top = 88
-    Width = 203
-    Caption = 'Show activation status'
-    OnClick = Button2Click
+    Width = 243
+    Caption = 'Show the activation status'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 128
     Height = 25
     Top = 120
-    Width = 203
-    Caption = 'Change product key'
-    OnClick = Button3Click
+    Width = 240
+    Caption = 'Change the product key'
     TabOrder = 2
+    OnClick = Button3Click
   end
   object LabeledEdit1: TLabeledEdit
     Left = 64
@@ -50,12 +50,12 @@ object Form1: TForm1
     OnChange = LabeledEdit1Change
   end
   object Button4: TButton
-    Left = 160
+    Left = 152
     Height = 25
     Top = 152
-    Width = 136
-    Caption = 'Reset activation'
-    OnClick = Button4Click
+    Width = 176
+    Caption = 'Reset the activation'
     TabOrder = 4
+    OnClick = Button4Click
   end
 end
