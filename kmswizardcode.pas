@@ -36,7 +36,7 @@ implementation
 procedure window_setup();
 begin
  Application.Title:='Kms wizard';
- Form1.Caption:='Kms wizard 0.3.4';
+ Form1.Caption:='Kms wizard 0.3.5';
  Form1.BorderStyle:=bsDialog;
  Form1.Font.Name:=Screen.MenuFont.Name;
  Form1.Font.Size:=14;
