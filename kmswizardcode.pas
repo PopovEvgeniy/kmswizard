@@ -9,57 +9,57 @@ uses Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
-  { TForm1 }
+  { TMainWindow }
 
-  TForm1 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    LabeledEdit1: TLabeledEdit;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+  TMainWindow = class(TForm)
+    ActivateButton: TButton;
+    ShowStatusButton: TButton;
+    ChangeKeyButton: TButton;
+    ResetButton: TButton;
+    ServerField: TLabeledEdit;
+    procedure ActivateButtonClick(Sender: TObject);
+    procedure ShowStatusButtonClick(Sender: TObject);
+    procedure ChangeKeyButtonClick(Sender: TObject);
+    procedure ResetButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure LabeledEdit1Change(Sender: TObject);
+    procedure ServerFieldChange(Sender: TObject);
   private
 
   public
 
   end;
 
-var Form1: TForm1;
+var MainWindow: TMainWindow;
 
 implementation
 
 procedure window_setup();
 begin
  Application.Title:='Kms wizard';
- Form1.Caption:='Kms wizard 0.3.5';
- Form1.BorderStyle:=bsDialog;
- Form1.Font.Name:=Screen.MenuFont.Name;
- Form1.Font.Size:=14;
+ MainWindow.Caption:='Kms wizard 0.3.6';
+ MainWindow.BorderStyle:=bsDialog;
+ MainWindow.Font.Name:=Screen.MenuFont.Name;
+ MainWindow.Font.Size:=14;
 end;
 
 procedure interface_setup();
 begin
- Form1.LabeledEdit1.LabelPosition:=lpLeft;
- Form1.LabeledEdit1.Text:='';
- Form1.Button1.Enabled:=False;
- Form1.Button1.ShowHint:=False;
- Form1.Button2.ShowHint:=Form1.Button1.ShowHint;
- Form1.Button3.ShowHint:=Form1.Button1.ShowHint;
- Form1.Button4.ShowHint:=Form1.Button1.ShowHint;
+ MainWindow.ServerField.LabelPosition:=lpLeft;
+ MainWindow.ServerField.Text:='';
+ MainWindow.ActivateButton.Enabled:=False;
+ MainWindow.ActivateButton.ShowHint:=False;
+ MainWindow.ShowStatusButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
+ MainWindow.ChangeKeyButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
+ MainWindow.ResetButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
 end;
 
 procedure language_setup();
 begin
- Form1.LabeledEdit1.EditLabel.Caption:='Server';
- Form1.Button1.Caption:='Activate';
- Form1.Button2.Caption:='Show the activation status';
- Form1.Button3.Caption:='Change the product key';
- Form1.Button4.Caption:='Reset the activation';
+ MainWindow.ServerField.EditLabel.Caption:='Server';
+ MainWindow.ActivateButton.Caption:='Activate';
+ MainWindow.ShowStatusButton.Caption:='Show the activation status';
+ MainWindow.ChangeKeyButton.Caption:='Change the product key';
+ MainWindow.ResetButton.Caption:='Reset the activation';
 end;
 
 procedure setup();
@@ -104,34 +104,34 @@ end;
 
 {$R *.lfm}
 
-{ TForm1 }
+{ TMainWindow }
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TMainWindow.FormCreate(Sender: TObject);
 begin
  setup();
 end;
 
-procedure TForm1.LabeledEdit1Change(Sender: TObject);
+procedure TMainWindow.ServerFieldChange(Sender: TObject);
 begin
- Form1.Button1.Enabled:=Form1.LabeledEdit1.Text<>'';
+ MainWindow.ActivateButton.Enabled:=MainWindow.ServerField.Text<>'';
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TMainWindow.ActivateButtonClick(Sender: TObject);
 begin
- do_activation(Form1.LabeledEdit1.Text);
+ do_activation(MainWindow.ServerField.Text);
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TMainWindow.ShowStatusButtonClick(Sender: TObject);
 begin
  show_activation_status();
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TMainWindow.ChangeKeyButtonClick(Sender: TObject);
 begin
  change_product_key(Application.Title);
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TMainWindow.ResetButtonClick(Sender: TObject);
 begin
  reset_activation();
 end;

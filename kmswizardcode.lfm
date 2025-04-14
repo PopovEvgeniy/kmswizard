@@ -1,4 +1,4 @@
-object Form1: TForm1
+object MainWindow: TMainWindow
   Left = 248
   Height = 186
   Top = 210
@@ -6,56 +6,55 @@ object Form1: TForm1
   Caption = 'Easy kms'
   ClientHeight = 186
   ClientWidth = 462
-  LCLVersion = '4.0.0.1'
   OnCreate = FormCreate
-  object Button1: TButton
+  object ActivateButton: TButton
     Left = 192
     Height = 25
     Top = 56
     Width = 75
     Caption = 'Activate'
     TabOrder = 0
-    OnClick = Button1Click
+    OnClick = ActivateButtonClick
   end
-  object Button2: TButton
+  object ShowStatusButton: TButton
     Left = 128
     Height = 25
     Top = 88
     Width = 243
     Caption = 'Show the activation status'
     TabOrder = 1
-    OnClick = Button2Click
+    OnClick = ShowStatusButtonClick
   end
-  object Button3: TButton
+  object ChangeKeyButton: TButton
     Left = 128
     Height = 25
     Top = 120
     Width = 240
     Caption = 'Change the product key'
     TabOrder = 2
-    OnClick = Button3Click
+    OnClick = ChangeKeyButtonClick
   end
-  object LabeledEdit1: TLabeledEdit
+  object ServerField: TLabeledEdit
     Left = 64
     Height = 23
     Top = 16
     Width = 392
-    EditLabel.Height = 15
+    EditLabel.Height = 23
     EditLabel.Width = 32
     EditLabel.Caption = 'Server'
     EditLabel.ParentColor = False
     LabelPosition = lpLeft
     TabOrder = 3
-    Text = 'LabeledEdit1'
-    OnChange = LabeledEdit1Change
+    Text = 'ServerField'
+    OnChange = ServerFieldChange
   end
-  object Button4: TButton
+  object ResetButton: TButton
     Left = 152
     Height = 25
     Top = 152
     Width = 176
     Caption = 'Reset the activation'
     TabOrder = 4
-    OnClick = Button4Click
+    OnClick = ResetButtonClick
   end
 end

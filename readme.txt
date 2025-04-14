@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.3.5
+                                           Version 0.3.6
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -19,7 +19,7 @@ Product key
 
 The volume license is the best choice because it doesn't have problems with the activation. Use the volume license if possible.
 You need to apply the product key from the volume license before activation if you have an ordinary license.
-You can see these keys here: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612867(v%3Dws.11)
+You can see these keys here: https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys
 
 Troubleshooting guide
 
@@ -36,7 +36,7 @@ You can send me a letter at tuzik87@inbox.ru.
 About program modification
 
 The code is included in the source.zip archive.
-It can be compiled under Lazarus 4.0 RC1 or higher.
+It can be compiled under Lazarus 4.0 RC3 or higher.
 
 Version history
 
@@ -51,3 +51,4 @@ Version history
 0.3.4: The small changes.
 0.3.4.1-0.3.4.2: The documentation has been updated.
 0.3.5: The source code was recompiled under Lazarus 4.0 RC1.
+0.3.6: The source code was recompiled under Lazarus 4.0 RC3.
