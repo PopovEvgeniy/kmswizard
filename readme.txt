@@ -1,6 +1,6 @@
                                             Kms wizard
 
-                                           Version 0.3.6
+                                           Version 0.3.6.1
 
                    Simple activation tool for Microsoft Windows by Popov Evgeniy Alekseyevich
 
@@ -27,11 +27,7 @@ Try to change the server or product key if you have trouble with activation.
 
 License
 
-This program is distributed under GNU GENERAL PUBLIC LICENSE.
-
-Contact
-
-You can send me a letter at tuzik87@inbox.ru.
+This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
 About program modification
 
@@ -52,3 +48,4 @@ Version history
 0.3.4.1-0.3.4.2: The documentation has been updated.
 0.3.5: The source code was recompiled under Lazarus 4.0 RC1.
 0.3.6: The source code was recompiled under Lazarus 4.0 RC3.
+0.3.6.1: The documentation has been updated.
