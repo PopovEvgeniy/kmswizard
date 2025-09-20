@@ -6,6 +6,7 @@ object MainWindow: TMainWindow
   Caption = 'Easy kms'
   ClientHeight = 186
   ClientWidth = 462
+  LCLVersion = '4.2.0.0'
   OnCreate = FormCreate
   object ActivateButton: TButton
     Left = 192
