@@ -1,11 +1,16 @@
 unit Kmswizardcode;
 
+{
+ This sofware was made by Popov Evgeniy Alekseyevich.
+ It is distributed under the GNU GENERAL PUBLIC LICENSE (Version 2 or higher).
+}
+
 {$mode objfpc}
 {$H+}
 
 interface
 
-uses Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+uses kmsactivation, Classes, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -24,82 +29,52 @@ type
     procedure FormCreate(Sender: TObject);
     procedure ServerFieldChange(Sender: TObject);
   private
-
+    procedure window_setup();
+    procedure interface_setup();
+    procedure language_setup();
+    procedure setup();
   public
-
+    { public declarations }
   end;
 
 var MainWindow: TMainWindow;
 
 implementation
 
-procedure window_setup();
+procedure TMainWindow.window_setup();
 begin
  Application.Title:='Kms wizard';
- MainWindow.Caption:='Kms wizard 0.3.7';
- MainWindow.BorderStyle:=bsDialog;
- MainWindow.Font.Name:=Screen.MenuFont.Name;
- MainWindow.Font.Size:=14;
+ Self.Caption:='Kms wizard 0.3.8';
+ Self.BorderStyle:=bsDialog;
+ Self.Font.Name:=Screen.MenuFont.Name;
+ Self.Font.Size:=14;
 end;
 
-procedure interface_setup();
+procedure TMainWindow.interface_setup();
 begin
- MainWindow.ServerField.LabelPosition:=lpLeft;
- MainWindow.ServerField.Text:='';
- MainWindow.ActivateButton.Enabled:=False;
- MainWindow.ActivateButton.ShowHint:=False;
- MainWindow.ShowStatusButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
- MainWindow.ChangeKeyButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
- MainWindow.ResetButton.ShowHint:=MainWindow.ActivateButton.ShowHint;
+ Self.ServerField.LabelPosition:=lpLeft;
+ Self.ServerField.Text:='';
+ Self.ActivateButton.Enabled:=False;
+ Self.ActivateButton.ShowHint:=False;
+ Self.ShowStatusButton.ShowHint:=False;
+ Self.ChangeKeyButton.ShowHint:=False;
+ Self.ResetButton.ShowHint:=False;
 end;
 
-procedure language_setup();
+procedure TMainWindow.language_setup();
 begin
- MainWindow.ServerField.EditLabel.Caption:='Server';
- MainWindow.ActivateButton.Caption:='Activate';
- MainWindow.ShowStatusButton.Caption:='Show the activation status';
- MainWindow.ChangeKeyButton.Caption:='Change the product key';
- MainWindow.ResetButton.Caption:='Reset the activation';
+ Self.ServerField.EditLabel.Caption:='Server';
+ Self.ActivateButton.Caption:='Activate';
+ Self.ShowStatusButton.Caption:='Show the activation status';
+ Self.ChangeKeyButton.Caption:='Change the product key';
+ Self.ResetButton.Caption:='Reset the activation';
 end;
 
-procedure setup();
+procedure TMainWindow.setup();
 begin
- window_setup();
- interface_setup();
- language_setup();
-end;
-
-procedure execute_command(const command:string);
-var shell,arguments:string;
-begin
- shell:=GetEnvironmentVariable('COMSPEC');
- arguments:='/c '+command;
- if shell<>'' then ExecuteProcess(shell,arguments,[]);
-end;
-
-procedure do_activation(const server:string);
-begin
- execute_command('slmgr /skms '+server);
- execute_command('slmgr /ato');
-end;
-
-procedure reset_activation();
-begin
- execute_command('slmgr /upk');
- execute_command('slmgr /ckms');
- execute_command('slmgr /rearm');
-end;
-
-procedure change_product_key(const title:string);
-var key:string;
-begin
- key:=InputBox(title,'Enter a new product key','');
- if key<>'' then execute_command('slmgr /ipk '+key);
-end;
-
-procedure show_activation_status();
-begin
- execute_command('slmgr /dli');
+ Self.window_setup();
+ Self.interface_setup();
+ Self.language_setup();
 end;
 
 {$R *.lfm}
@@ -108,17 +83,17 @@ end;
 
 procedure TMainWindow.FormCreate(Sender: TObject);
 begin
- setup();
+ Self.setup();
 end;
 
 procedure TMainWindow.ServerFieldChange(Sender: TObject);
 begin
- MainWindow.ActivateButton.Enabled:=MainWindow.ServerField.Text<>'';
+ Self.ActivateButton.Enabled:=Self.ServerField.Text<>'';
 end;
 
 procedure TMainWindow.ActivateButtonClick(Sender: TObject);
 begin
- do_activation(MainWindow.ServerField.Text);
+ do_activation(Self.ServerField.Text);
 end;
 
 procedure TMainWindow.ShowStatusButtonClick(Sender: TObject);
@@ -128,7 +103,7 @@ end;
 
 procedure TMainWindow.ChangeKeyButtonClick(Sender: TObject);
 begin
- change_product_key(Application.Title);
+ change_product_key(InputBox(Application.Title,'Enter a new product key',''));
 end;
 
 procedure TMainWindow.ResetButtonClick(Sender: TObject);
