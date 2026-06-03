@@ -44,7 +44,7 @@ implementation
 procedure TMainWindow.window_setup();
 begin
  Application.Title:='Kms wizard';
- Self.Caption:='Kms wizard 0.3.8';
+ Self.Caption:='Kms wizard 0.3.9';
  Self.BorderStyle:=bsDialog;
  Self.Font.Name:=Screen.MenuFont.Name;
  Self.Font.Size:=14;
