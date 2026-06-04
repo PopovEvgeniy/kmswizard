@@ -6,21 +6,18 @@
 
 System requirements.
 
-Windows Vista or higher
-Internet connection
+Windows Vista or higher.
+Internet connection.
 
 The program description.
 
-This software lets you activate Microsoft Windows via a custom KMS server.
-Please use it for non-commercial home purposes only.
+This software lets you activate Microsoft Windows via a KMS server.
 This software needs admin rights for correct work. Run it as an admin.
 
 The product key.
 
-The volume license is the best choice because it doesn't have problems with the activation. Use the volume license if possible.
-You need to apply the product key from the volume license before activation if you have an ordinary license.
-You can see these keys here: https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys
-Try to change the server or the product key if you have trouble with activation.
+You require a volume license key.
+You can take the keys here: https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys
 
 License.
 
@@ -47,4 +44,4 @@ Version history.
 0.3.6: The source code was recompiled under Lazarus 4.0 RC3.
 0.3.6.1: The documentation has been updated.
 0.3.7: The source code was recompiled under Lazarus 4.2.
-0.3.8-0.3.9: The small changes.
+0.3.8-0.4: The small changes.
